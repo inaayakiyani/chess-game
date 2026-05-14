@@ -201,7 +201,11 @@ bool Board::makeMove(string from, string to)
 {
     if (from.length() != 2 || to.length() != 2)
         return false;
-
+if (from[0] < 'a' || from[0] > 'h' ||
+    to[0] < 'a' || to[0] > 'h' ||
+    from[1] < '1' || from[1] > '8' ||
+    to[1] < '1' || to[1] > '8')
+    return false;
     int fromCol = from[0] - 'a';
     int fromRow = 8 - (from[1] - '0');
     int toCol = to[0] - 'a';
