@@ -25,7 +25,10 @@ public:
     int getRow() const { return row; }
     int getCol() const { return col; }
     char getSymbol() const { return symbol; }
-
+bool isInsideBoard(int r, int c) const
+{
+    return r >= 0 && r < 8 && c >= 0 && c < 8;
+}
     void setPosition(int r, int c)
     {
         if (r < 0 || r > 7 || c < 0 || c > 7)
@@ -47,6 +50,8 @@ public:
 
     bool isValidMove(int destRow, int destCol, Piece* board[8][8])
     {
+        if (!isInsideBoard(destRow, destCol))
+        return false;
         int direction = isWhite ? -1 : 1;
         int startRow = isWhite ? 6 : 1;
 
