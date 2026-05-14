@@ -34,7 +34,7 @@ void displayWelcome()
 
     cout << "\n";
     setColor(96);
-    cout << "                                CHALLANGE YOUR MIND &\n";
+    cout << "                                CHALLENGE YOUR MIND &\n";
     cout << "                                  MASTER STRATEGY!\n";
     resetColor();
     cout << "\n";
@@ -174,7 +174,7 @@ int main()
                     cin.clear();
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     setColor(91);
-                    cout << "\n*** INPUT ERROR! Try again. ***\n\n";
+                    cout << "\n*** INVALID INPUT FORMAT! Please enter like: e2 e4 ***\n\n";
                     resetColor();
                     continue;
                 }
