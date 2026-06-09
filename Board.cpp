@@ -8,6 +8,7 @@ void setColor(int color)
     cout << "\033[" << color << "m";
 }
 
+//adding reset colour function to enhance the readabililty 
 void resetColor()
 {
     cout << "\033[0m";
