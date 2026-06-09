@@ -204,7 +204,7 @@ class King : public Piece
 public:
     King(bool white, int r, int c) : Piece(white, r, c, white ? 'K' : 'k') {}
 
-    char getType() const { return 'K'; }
+    char getType() const { return 'K'; } //getting type
 
     bool isValidMove(int destRow, int destCol, Piece* board[8][8])
     {
